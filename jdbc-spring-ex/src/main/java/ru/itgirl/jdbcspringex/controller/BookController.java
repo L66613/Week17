@@ -22,8 +22,9 @@ public class BookController {
     public List<Book> getAllBooks() {
         return bookRepository.findAllBooks();
     }
+
     @GetMapping("/book/{id}")
-    public static Book getBookById(@PathVariable("id") Long id){
-        return (Book) bookRepository.findBookById(id);
+    public Book getBookById(@PathVariable Long id) {
+        return bookRepository.findBookById(id);
     }
 }

@@ -1,31 +1,31 @@
 package ru.itgirl.jdbcspringex.model;
 
 public class Book {
-        private Long id;
-        private String name;
+    private Long id;
+    private String name;
 
-        public Book(Long id, String name) {
-            this.id = id;
-            this.name = name;
-        }
+    public Book(Long id, String name) {
+        this.id = id;
+        this.name = name;
+    }
 
-        public Book() {
-        }
+    public Book() {
+    }
 
-        public Long getId() {
-            return id;
-        }
+    public Long getId() {
+        return id;
+    }
 
-        public String getName() {
-            return name;
-        }
+    public String getName() {
+        return name;
+    }
 
-        public void setId(Long id) {
-            this.id = id;
-        }
+    public void setId(Long id) {
+        this.id = id;
+    }
 
-        public void setName(String name) {
-            this.name = name;
-        }
+    public void setName(String name) {
+        this.name = name;
+    }
 }
 

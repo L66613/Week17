@@ -8,6 +8,7 @@ import javax.sql.DataSource;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
+
 @Repository
 public class BookRepositoryImpl implements BookRepository {
     @Autowired
@@ -39,10 +40,10 @@ public class BookRepositoryImpl implements BookRepository {
         Book result = new Book();
 
         try (Connection connection = dataSource.getConnection();
-        ){
-             PreparedStatement statement = connection.prepareStatement("SELECT * FROM books WHERE id = ?");
-             statement.setLong(1, id);
-             ResultSet resultSet = statement.executeQuery();
+        ) {
+            PreparedStatement statement = connection.prepareStatement("SELECT * FROM books WHERE id = ?");
+            statement.setLong(1, id);
+            ResultSet resultSet = statement.executeQuery();
             {
                 while (resultSet.next()) {
                     Book id1 = converRowToBook(resultSet);
